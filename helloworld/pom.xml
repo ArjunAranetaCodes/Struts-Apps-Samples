@@ -3,17 +3,26 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.apache.struts</groupId>
-        <artifactId>struts-examples</artifactId>
-        <version>1.1.0</version>
-    </parent>
 
+    <groupId>org.apache.struts</groupId>
     <artifactId>helloworld</artifactId>
+    <version>1.0</version>
     <name>Hello World Struts 2 Example Application</name>
     <description>Hello world example application for the Struts 2 Getting Started tutorials</description>
 
     <packaging>war</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <struts2.version>6.3.0.2</struts2.version>
+        <log4j2.version>2.22.1</log4j2.version>
+        <jetty-plugin.version>9.4.46.v20220331</jetty-plugin.version>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <jackson.version>2.14.1</jackson.version>
+        <jackson-data-bind.version>2.14.1</jackson-data-bind.version>
+    </properties>
 
     <build>
         <finalName>hello-world</finalName>
@@ -36,4 +45,22 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.11.0.GA</version>
+        </dependency>
+    </dependencies>
 </project>
